@@ -12,8 +12,8 @@ terraform {
 }
 
 provider "aws" {
-  profile                 = var.profile
-  shared_credentials_file = "~/.aws/credentials"
+  profile                  = var.profile
+  shared_credentials_files = ["~/.aws/credentials"]
 }
 
 module "vpc" {
