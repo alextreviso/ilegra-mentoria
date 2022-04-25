@@ -13,11 +13,12 @@ terraform {
 
 provider "aws" {
   profile                  = var.profile
-  shared_credentials_files = ["~/.aws/credentials"]
+  region                   = var.region
+  shared_credentials_file  = "~/.aws/credentials"
 }
 
 module "vpc" {
-  source                = "./vpc"
+  source                = "github.com/alextreviso/ilg-atreviso//modules/vpc"
   vpc_name              = var.vpc_name
   vpc_cidr              = var.vpc_cidr
   public_subnets_cidrs  = var.public_subnets_cidrs
