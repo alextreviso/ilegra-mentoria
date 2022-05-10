@@ -1,20 +1,19 @@
 terraform {
   required_version = ">= 1.0.0"
   required_providers {
-    aws = ">= 3.37"
+    aws = ">= 3"
   }
 
-  backend "s3" {
-    bucket = "ilg-atreviso-tfstate"
-    key    = "terraform.tfstate"
-    region = "us-east-1"
+  cloud {
+    organization = "atreviso"
+    workspaces {
+      name = "ilegra-mentoria"
+    }
   }
 }
 
 provider "aws" {
-  profile                  = var.profile
-  region                   = var.region
-  shared_credentials_file  = "~/.aws/credentials"
+  region                = var.region
 }
 
 module "vpc" {
