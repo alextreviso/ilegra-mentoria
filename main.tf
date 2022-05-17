@@ -28,3 +28,19 @@ module "vpc" {
   public_subnets        = module.vpc.public_subnets
   internet_gateway      = module.vpc.internet_gateway
 }
+
+module "rds" {
+  source                    = "github.com/alextreviso/ilg-atreviso//modules/rds"
+  database_name             = var.database_name
+  allowed_cidrs             = var.allowed_cidrs
+  engine                    = var.engine
+  engine_version            = var.engine_version
+  db_username               = var.db_username
+  db_password               = var.db_password
+  db_port                   = var.db_port
+  deletion_protection       = var.deletion_protection
+  vpc_id                    = module.vpc.vpc_id
+  storage_type              = var.storage_type
+  region                    = var.region
+  env                       = var.env
+}
