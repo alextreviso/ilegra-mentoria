@@ -16,5 +16,5 @@ db_port                     = "5432"
 deletion_protection         = true
 storage_type                = "gp2"
 instance_class              = "db.t3.micro"
-publicly_accessible         = false
+publicly_accessible         = true
 allocated_storage           = "1000"
