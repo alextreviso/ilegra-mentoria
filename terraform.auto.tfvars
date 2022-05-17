@@ -7,7 +7,7 @@ region                = "us-east-1"
 env                   = "dev"
 
 database_name               = "atreviso"
-allowed_cidrs               = "0.0.0.0/0"
+allowed_cidrs               = ["0.0.0.0/0"]
 engine                      = "postgres"
 engine_version              = "13.4"
 db_username                 = "atreviso"
