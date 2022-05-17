@@ -41,6 +41,7 @@ module "rds" {
   deletion_protection       = var.deletion_protection
   vpc_id                    = module.vpc.vpc_id
   storage_type              = var.storage_type
+  allocated_storage         = var.allocated_storage
   instance_class            = var.instance_class
   publicly_accessible       = var.publicly_accessible
   region                    = var.region

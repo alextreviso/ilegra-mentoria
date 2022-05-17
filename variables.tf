@@ -17,3 +17,4 @@ variable "deletion_protection" {}
 variable "storage_type" {}    
 variable "instance_class" {}
 variable "publicly_accessible" {}     
+variable "allocated_storage" {}
