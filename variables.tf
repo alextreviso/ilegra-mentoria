@@ -14,4 +14,6 @@ variable "db_username" {}
 variable "db_password" {}             
 variable "db_port" {}                
 variable "deletion_protection" {}          
-variable "storage_type" {}         
+variable "storage_type" {}    
+variable "instance_class" {}
+variable "publicly_accessible" {}     
