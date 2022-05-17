@@ -13,6 +13,5 @@ variable "engine_version" {}
 variable "db_username" {}              
 variable "db_password" {}             
 variable "db_port" {}                
-variable "deletion_protection" {}       
-variable "vpc_id" {}          
+variable "deletion_protection" {}          
 variable "storage_type" {}         
