@@ -17,7 +17,8 @@ provider "aws" {
 }
 
 module "vpc" {
-  source                = "github.com/alextreviso/ilg-atreviso//modules/vpc"
+  source  = "app.terraform.io/atreviso/vpc/aws"
+  version = "1.0.0"
   vpc_name              = var.vpc_name
   vpc_cidr              = var.vpc_cidr
   public_subnets_cidrs  = var.public_subnets_cidrs
@@ -30,7 +31,8 @@ module "vpc" {
 }
 
 module "rds" {
-  source                    = "github.com/alextreviso/ilg-atreviso//modules/rds"
+  source  = "app.terraform.io/atreviso/rds/aws"
+  version = "1.0.0"
   database_name             = var.database_name
   allowed_cidrs             = var.allowed_cidrs
   engine                    = var.engine
